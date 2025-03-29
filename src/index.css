@@ -1,0 +1,223 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+.main-home{
+  display: flex;
+  width: 100vw;
+  flex-direction: row;
+}
+.main{
+  border: 0.5px solid gray;
+  overflow-y: scroll;
+  overflow-x: scroll;
+  width: auto;
+}
+
+      
+.dashboard{
+  width: 18vw;
+  border: .5px solid gray;
+}
+.dashboard_grp{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.home-head{
+  font-weight: bolder;
+  font-size: 25px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+.main-search{
+  width: 30vw;
+  outline: none;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.dashboard_grp Button {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Increased spacing between icon and text */
+  background-color: transparent !important;
+  color: black;
+  outline: none;
+  text-align: start;
+  font-size: 14px !important; /* Slightly increase text size */
+  padding: 5px 10px;
+  border: none;
+}
+
+.dashboard_grp Button i,  /* If using <i> for icons */
+.dashboard_grp Button svg { /* If using SVG icons */
+  font-size: 18px; /* Increase icon size */
+  width: 18px;  /* Ensures uniform scaling */
+  height: 18px;
+}
+
+.dashboard_grp Button:hover {
+  background-color: #5151fe !important;
+  color: white;
+}
+
+
+.dashboard_grp{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+
+/* navdrop */
+.upperNav{
+  display: flex;
+  padding-left: 5px;
+}
+.upperNav .NavItem{
+  background-color: transparent !important;
+  border: 1px solid gray;
+  border-radius: 4px;
+  padding: 2px 5px 2px 5px;
+  font-size: 13px;
+}
+
+.upperNav .NavItem:hover{
+  background-color: #5151fe !important;
+  color: white;
+}
+
+
+.navdrop{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-top: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.navgrp{
+  display: flex;
+  gap: 5px;
+}
+#dropdown-basic-button{
+  background-color: transparent !important;
+  color: black;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+.navgrp Button{
+  font-size: 13px !important;
+}
+
+
+/* table */
+.table-container {
+  width: 100%;
+  overflow-x: auto;  /* Enables horizontal scrolling */
+  white-space: nowrap;  /* Prevents text wrapping */
+}
+
+.table-container table {
+  min-width: 1500px;  /* Ensures table is wider than the screen */
+  border-collapse: collapse;
+}
+
+.table-container th, .table-container td {
+  white-space: nowrap; /* Prevents multi-line text */
+  padding: 10px;
+}
+
+.loan-number {
+  color: #5151fe;
+  text-decoration: underline;
+  cursor: pointer; /* Optional: Makes it look clickable */
+}
+
+@media screen and (max-width: 768px) {
+  .main-home {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .dashboard {
+    width: 100%;
+    border: none;
+    padding: 10px 0;
+  }
+
+  .main {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .dashboard_grp {
+    align-items: center;
+    width: 100%;
+  }
+
+  .home-head {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .main-search {
+    width: 90%;
+  }
+
+  .upperNav {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .navdrop {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navgrp {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #dropdown-basic-button {
+    width: 90%;
+    text-align: center;
+  }
+
+  .table-container {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .table-container table {
+    min-width: 100%;
+  }
+
+  .loan-number {
+    font-size: 14px;
+  }
+}
+
+
